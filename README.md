@@ -1,6 +1,6 @@
 # PruebaFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+El proyecto esta realizado en Angular CLI version 8.3.23.
 
 ## Development server
 

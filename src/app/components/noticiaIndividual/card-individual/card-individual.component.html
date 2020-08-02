@@ -1,0 +1,14 @@
+<div class="grid demo-card-square contenedor" (click)="guardarNoticia(noticia)">
+  <div class="mdl-card__title" style="padding: 0;">
+    <img [src]="noticia.urlToImage" height="200px" width="100%" alt="" />
+  </div>
+  <div class="mdl-card__supporting-text cortar" *ngIf="noticia.description">
+    <p itemprop="description" class="truncar-texto">
+      {{ noticia.description }}
+    </p>
+  </div>
+
+  <div class="mdl-card__actions mdl-card--border texto-date">
+    {{ noticia.publishedAt | date: "yyyy-MM-dd HH:mm" }}
+  </div>
+</div>

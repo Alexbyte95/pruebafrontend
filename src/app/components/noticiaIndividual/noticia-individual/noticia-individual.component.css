@@ -1,0 +1,49 @@
+.mdl-grid {
+
+
+  margin-top: 20px;
+  padding-top: 0;
+  font-style: italic;
+
+}
+.imagen-texto, img {
+  display: block;
+  position: relative;
+  height:250px;
+  object-fit: cover;
+}
+.contenido{
+  font-size: 17px;
+  font-family: 'Rokkitt', serif;
+}
+
+.texto , h1 {
+  font-family: 'Kreon', serif;
+  background-color: rgba(12, 11, 11, 0.795);
+  display: block;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  font-size:15px;
+  color: white;
+}
+@media (min-width: 700px) {
+
+.texto , h1 {
+    font-size: 40px;
+  }
+  .imagen-texto, img {
+    height:500px;
+    display: block;
+    position: relative;
+    object-fit: cover;
+  }
+  .contenido{
+
+    font-family: 'Rokkitt', serif;
+    font-size: 22px;
+  }
+}

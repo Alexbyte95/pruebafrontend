@@ -1,0 +1,6 @@
+<div class="mdl-grid" [@cardAnimation]="noticias">
+  <div class="mdl-card mdl-cell mdl-cell--3-col mdl-cell--4-col-phone mdl-card mdl-cell--4-col-tablet mdl-shadow--2dp"
+    *ngFor="let noticia of noticias">
+    <app-card-noticia [noticia]="noticia"></app-card-noticia>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div style="margin: 10px;">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <div class="imagen-texto">
+        <img [src]="noticia.urlToImage" width="100%" alt="" />
+        <div class="texto">
+          <h1>{{ noticia.title }}</h1>
+        </div>
+      </div>
+
+      <p>
+        Author: {{ noticia.author }}
+        {{ noticia.publishedAt | date: "yyyy-MM-dd HH:mm" }}
+      </p>
+    </div>
+  </div>
+
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--8-col" style="height: 500px;">
+      <p class="contenido">{{ noticia.content }}</p>
+      <a href="">
+        <i class="fab fa-facebook faa-horizontal fa-2x"></i>
+      </a>
+      <a href="">
+        <i class="fab fa-twitter faa-horizontal fa-2x"></i>
+      </a>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-phone mdl-cell--8-col-tablet">
+      <h4>Ultimas noticias</h4>
+      <div *ngFor="let noticia of noticiasInteres | slice: 0:4; let i = index">
+        <app-card-individual (cambioNoticia)="actualizarNoticia($event)" [noticia]="noticia"></app-card-individual>
+      </div>
+    </div>
+  </div>
+</div>

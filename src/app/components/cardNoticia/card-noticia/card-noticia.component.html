@@ -1,0 +1,29 @@
+
+<div class=" grid demo-card-square contenedor "routerLink='/noticia/{{noticia.title}}'(click)="guardarNoticia(noticia)" >
+  <div class="mdl-card__title " >
+
+
+    <img [src]="noticia.urlToImage" height="200px" width="100%" alt="">
+
+
+    <div *ngIf="noticia.author" class="texto-encima">
+      <p>Author:{{noticia.author}} </p>
+    </div>
+
+
+
+
+  </div>
+  <div class="mdl-card__supporting-text cortar" *ngIf="noticia.description">
+    <p itemprop="description" class="truncar-texto descripcion-texto"> {{noticia.description}}</p>
+  </div>
+
+  <div class="mdl-card__actions mdl-card--border texto-date">
+
+    {{noticia.publishedAt | date:'yyyy-MM-dd HH:mm'}}
+
+
+  </div>
+
+</div>
+
